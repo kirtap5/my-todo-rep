@@ -19,9 +19,12 @@ Template.body.events({
         target.text.value = '';
     },
 
-});
-
-Template.task.events({
+    'click .toggle-checked'(){
+        Tasks.update(this._id, {
+            $set: { checked : ! this.checked },
+        });
+    },
+    
 
     'click .delete'(event){
         Tasks.remove(this._id);

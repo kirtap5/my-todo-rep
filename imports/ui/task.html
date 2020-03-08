@@ -1,13 +1,13 @@
 
   <template name="task">
-    <li class="checked">
+      <li class="{{#if checked}}checked{{/if}}">
+        <div class="task-flex-box">
 
-        <button class="delete">&times;</button>
+          <button class="delete">&times;</button>
 
-        <input type="checkbox" class="toggle-checked"/>
-        <span class="text">{{text}}</span> 
-    
-    
-    </li>
+          <input type="checkbox" checked="{{checked}}" class="toggle-checked"/>
+          <span class="text">{{text}}</span> 
+        </div>
 
+      </li>
   </template>
